@@ -1,0 +1,16 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+
+<script type="text/javascript">
+let url = "http://query.yahooapis.com/v1/public/yql?q=env%20%27store://datatables.org/alltableswithkeys%27;select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22ddd%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json";
+
+
+// getJSON takes 2 args:
+//     1. the URL (where)
+//     2. Function to run when the JavaScript is loaded
+console.log("Issuing AJAX request...")
+$.getJSON(url, (data)=> {
+    console.log(data);
+});
+console.log("AJAX request issued. Waiting patiently for the guy in front of me to get finished.")
+</script>
