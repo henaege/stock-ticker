@@ -25,7 +25,7 @@ $(document).ready(()=> {
             }
         })
     }
-    $('.yahoo-finance-form').submit((event)=> {
+    $('.buttons').submit((event)=> {
         // prevent the broweser from submitting the form, JS will handle everything
         event.preventDefault();
         $( function() {
@@ -52,7 +52,7 @@ $(document).ready(()=> {
                     newRow += addRow(stocksArray[i]);
                 }
             } else {
-                var newRow = addRow(theDataJSFound);(theDataJSFound.query.results.quote);
+                var newRow = addRow(theDataJSFound);//(theDataJSFound.query.results.quote);
             }
             
             
@@ -82,13 +82,12 @@ $(document).ready(()=> {
             // for (i=0; i < stockInfo.length; i++) {
                 // console.log(stockInfo)
                 
-                newHTML += '<tr class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>';
-                newHTML += '<td>'+stockInfo.Symbol+'</td>';
-                newHTML += '<td>'+stockInfo.Name+'</td>';
-                newHTML += '<td>'+stockInfo.Ask+'</td>';
-                newHTML += '<td>'+stockInfo.Bid+'</td>';
-                newHTML += '<td class="bg-'+classChange+'">'+stockInfo.Change+'</td>';
-                newHTML += '</tr>';
+                newHTML += '<div class="table-cell">'+stockInfo.Symbol+'</div>';
+                newHTML += '<div class="table-cell">'+stockInfo.Name+'</div>';
+                newHTML += '<div class="table-cell">'+stockInfo.Ask+'</div>';
+                newHTML += '<div class="table-cell">'+stockInfo.Bid+'</div>';
+                newHTML += '<div class="table-cell" class="bg-'+classChange+'">'+stockInfo.Change+'</div>';
+                newHTML += '</div>';
             // }
             return newHTML;
             }

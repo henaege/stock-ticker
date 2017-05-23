@@ -1,7 +1,57 @@
 h1 {
     color: blue;
+    font-family: 'Cabin', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
 }
 
 .col-sm-12 {
     margin-bottom: 15px;
+}
+
+.parent {
+    display: flex;
+    border: 5px lightcoral solid;
+    padding: 3px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+button {
+    text-align: center;
+    width: auto;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#symbol {
+    width: 550px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    width: 100%;
+    
+}
+
+.table-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: auto;
+    padding: 5px;
+    overflow: hidden;
+    list-style: none;
+    border: solid 1px darkgrey;
+    background: lightgray;
+    justify-content: center;
 }
